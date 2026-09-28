@@ -60,12 +60,12 @@ graph TD
     UserA -->|"طلب سجلات User A الخاصة"| Controller
     UserA -->|"طلب سجلات User B الخاصة"| Controller
     
-    CheckPhone -->|لم يتم إرسال هاتف| Allow
-    CheckPhone -->|تم إرسال هاتف| IsAdmin
-    IsAdmin -->|نعم (مدير نظام)| Allow
-    IsAdmin -->|لا (مستخدم عادي)| MatchPhone
-    MatchPhone -->|متطابق| Allow
-    MatchPhone -->|غير متطابق| Deny
+    CheckPhone -->|"لم يتم إرسال هاتف"| Allow
+    CheckPhone -->|"تم إرسال هاتف"| IsAdmin
+    IsAdmin -->|"نعم (مدير نظام)"| Allow
+    IsAdmin -->|"لا (مستخدم عادي)"| MatchPhone
+    MatchPhone -->|"متطابق"| Allow
+    MatchPhone -->|"غير متطابق"| Deny
 ```
 
 ### المعادلة الصارمة لمنح الوصول:
