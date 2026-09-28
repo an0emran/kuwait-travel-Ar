@@ -1,0 +1,63 @@
+/* Header User Icons Styles */
+.header-user-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.notification-icon {
+    position: relative;
+    cursor: pointer;
+    padding: 8px;
+    borderRadius: 50%;
+    transition: all 0.3s ease;
+}
+
+.notification-icon:hover {
+    background: rgba(142, 32, 37, 0.1);
+}
+
+.user-profile-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 2px solid #eee;
+}
+
+.user-profile-icon:hover {
+    background: rgba(142, 32, 37, 0.05);
+    border-color: var(--primary);
+}
+
+/* Responsive Styles */
+@media (max-width: 968px) {
+    .header-user-icons {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 10px;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #eee;
+    }
+
+    .user-profile-icon {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .btn-login-nav.logout {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .user-profile-icon div:last-child span:first-child {
+        max-width: 80px !important;
+    }
+}
