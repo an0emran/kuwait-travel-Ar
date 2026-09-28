@@ -160,18 +160,18 @@ sequenceDiagram
 
 ```mermaid
 graph TD
-    Req[Incoming Request] --> MethodCheck{نوع الطلب (HTTP Method)?}
+    Req[Incoming Request] --> MethodCheck{"نوع الطلب (HTTP Method)؟"}
     
-    MethodCheck -->|طلبات التعديل POST/PUT/DELETE| CSRFCheck[verifyCsrf Middleware]
-    MethodCheck -->|طلبات القراءة GET| AuthCheck[verifyToken Middleware]
+    MethodCheck -->|"طلبات التعديل POST/PUT/DELETE"| CSRFCheck[verifyCsrf Middleware]
+    MethodCheck -->|"طلبات القراءة GET"| AuthCheck[verifyToken Middleware]
     
     CSRFCheck --> AuthCheck
-    AuthCheck --> RoleCheck{متطلب الدور (Role)?}
+    AuthCheck --> RoleCheck{"متطلب الدور (Role)؟"}
     
-    RoleCheck -->|مسارات عامة Public| Handler[تنفيذ Route Handler]
-    RoleCheck -->|أي مستخدم مصادق عليه Authenticated| Handler
-    RoleCheck -->|وكيل أو مدير Agent / Admin| AgentGuard[requireAgent Middleware]
-    RoleCheck -->|مدير النظام فقط Admin Only| AdminGuard[requireAdmin Middleware]
+    RoleCheck -->|"مسارات عامة Public"| Handler[تنفيذ Route Handler]
+    RoleCheck -->|"أي مستخدم مصادق عليه Authenticated"| Handler
+    RoleCheck -->|"وكيل أو مدير Agent / Admin"| AgentGuard[requireAgent Middleware]
+    RoleCheck -->|"مدير النظام فقط Admin Only"| AdminGuard[requireAdmin Middleware]
     
     AgentGuard --> Handler
     AdminGuard --> Handler
