@@ -1,15 +1,5 @@
 # 1 - Project Overview
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
-  * {
-    font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, sans-serif;
-  }
-  code, pre {
-    font-family: 'Consolas', 'Courier New', Courier, monospace !important;
-  }
-</style>
-
 [← العودة إلى README الرئيسية](../README.md) | [الفصل التالي: System Architecture →](02-system-architecture.md)
 
 ---
